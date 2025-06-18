@@ -11,6 +11,6 @@
 <h6>Java FX 24 Version</h6>
 <a href="https://gluonhq.com/products/javafx/"> Download Link</a>
 
-<h2>Traffic Simulation Project</h2>
+<h2>Output</h2>
 <img src="./uploads/1.jpg">
 <img src="./uploads/2.jpg">
