@@ -23,7 +23,8 @@ public class TrafficSimulatorGUI {
             "A", new Point2D(200, 200),
             "B", new Point2D(600, 200),
             "C", new Point2D(600, 600),
-            "D", new Point2D(200, 600));
+            "D", new Point2D(200, 600),
+            "E", new Point2D(200, 600));
 
     public TrafficSimulatorGUI() {
         initializeRoadNetwork();
@@ -39,7 +40,7 @@ public class TrafficSimulatorGUI {
     }
 
     private void initializeRoadNetwork() {
-        String[] intersections = { "A", "B", "C", "D" };
+        String[] intersections = { "A", "B", "C", "D", "E" };
         for (String id : intersections) {
             roadNetwork.addIntersection(id);
         }
@@ -48,11 +49,14 @@ public class TrafficSimulatorGUI {
         roadNetwork.addRoad("B", "C", 3);
         roadNetwork.addRoad("A", "D", 5);
         roadNetwork.addRoad("D", "C", 4);
+        roadNetwork.addRoad("B", "E", 3);
 
         addVehicle(new Vehicle("V1", false, "A", "C"));
         addVehicle(new Vehicle("V2", true, "A", "B"));
         addVehicle(new Vehicle("V3", false, "A", "D"));
         addVehicle(new Vehicle("V4", false, "A", "C"));
+        addVehicle(new Vehicle("V5", false, "B", "E"));
+        addVehicle(new Vehicle("V6", true, "C", "D"));
     }
 
     private void setupUI() {
